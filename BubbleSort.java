@@ -26,6 +26,7 @@ public class BubbleSort {
             System.out.println("Error: " + e.getMessage());
         }
     }
+
     // ---- Bubble Sort ----
     public static void bubbleSort(int[] arr) {
         boolean swapped;
@@ -43,7 +44,8 @@ public class BubbleSort {
             }
         } while (swapped);
     }
-        // ---- Leer archivo ----
+
+    // ---- Leer archivo ----
     public static int[] leerNumeros(String ruta) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(ruta));
         ArrayList<Integer> lista = new ArrayList<>();
@@ -60,7 +62,8 @@ public class BubbleSort {
         }
         return nums;
     }
-   // ---- Guardar archivo ----
+
+    // ---- Guardar archivo ----
     public static void guardarNumeros(String ruta, int[] arr) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(ruta));
 
