@@ -60,3 +60,23 @@ public class BubbleSort {
         }
         return nums;
     }
+   // ---- Guardar archivo ----
+    public static void guardarNumeros(String ruta, int[] arr) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(ruta));
+
+        for (int n : arr) {
+            bw.write(n + "");
+            bw.newLine();
+        }
+
+        bw.close();
+    }
+
+    // ---- Imprimir en consola ----
+    public static void imprimir(int[] arr) {
+        for (int n : arr) {
+            System.out.print(n + " ");
+        }
+        System.out.println();
+    }
+}
