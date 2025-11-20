@@ -43,3 +43,20 @@ public class BubbleSort {
             }
         } while (swapped);
     }
+        // ---- Leer archivo ----
+    public static int[] leerNumeros(String ruta) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(ruta));
+        ArrayList<Integer> lista = new ArrayList<>();
+
+        String linea;
+        while ((linea = br.readLine()) != null) {
+            lista.add(Integer.parseInt(linea.trim()));
+        }
+        br.close();
+
+        int[] nums = new int[lista.size()];
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = lista.get(i);
+        }
+        return nums;
+    }
